@@ -1,0 +1,33 @@
+{
+  "name": "react-weather",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/volny/react-weather.git"
+  },
+  "author": "Felix Volny <felix@volny.co>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/volny/react-weather/issues"
+  },
+  "homepage": "https://github.com/volny/react-weather#readme",
+  "dependencies": {
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7",
+    "react-router": "^2.0.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.7.0",
+    "babel-loader": "^6.2.4",
+    "babel-preset-react": "^6.5.0",
+    "html-webpack-plugin": "^2.10.0",
+    "webpack": "^1.12.14",
+    "webpack-dev-server": "^1.14.1"
+  }
+}
