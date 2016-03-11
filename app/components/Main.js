@@ -1,11 +1,8 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
+import React from 'react'
 
-function Main (props) {
+export default function Main (props) {
   return (
     <h1>Hello React</h1>
   )
 }
-
-module.exports = Main;
 

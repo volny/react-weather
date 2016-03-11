@@ -1,18 +1,10 @@
-var React = require('react');
-var ReactRouter = require('react-router');
-var Router = ReactRouter.Router;
-var Route = ReactRouter.Route;
-var IndexRoute = ReactRouter.IndexRoute;
-var hashHistory = ReactRouter.hashHistory;
+import React from 'react'
+import { Router, Route, hashHistory, IndexRoute } from 'react-router'
+import Main from '../components/Main'
 
-var Main = require('../components/Main');
-
-var routes = (
+module.exports = (
   <Router history={hashHistory}>
     <Route path='/' component={Main}/>
   </Router>
 )
-
-module.exports = routes;
-
 
