@@ -1,10 +1,12 @@
 import React from 'react'
-import { homeContainer } from '../styles'
+import { homeContainer, subheader } from '../styles'
+import GetCityContainer from '../containers/GetCityContainer'
 
 export default function Home (props) {
   return (
     <div style={homeContainer}>
-      <h2>Home</h2>
+      <h2 style={subheader}>Select a city</h2>
+      <GetCityContainer />
     </div>
   )
 }
