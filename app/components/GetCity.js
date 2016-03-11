@@ -1,24 +1,14 @@
 import React from 'react'
 import { homeContainer, subheader } from '../styles'
 
-function Button (props) {
-  return (
-    <button type='button'
-      style={{margin: 10}}
-      className='btn btn-success'
-      onClick={props.onSubmitCity}>
-        {props.children}
-    </button>
-  )
-}
-
-function InputField (props) {
+function CityInput (props) {
   return (
     <input
       className='form-control'
-      placeholder='St. George, Utah'
+      placeholder='Vienna (press Enter)'
       type='text'
       onChange={props.onUpdateCity}
+      onKeyDown={props.onEnterSubmit}
       />
   )
 }
@@ -26,14 +16,11 @@ function InputField (props) {
 export default function Home (props) {
   return (
     <div>
-      <InputField
-      onUpdateCity={props.onUpdateCity}/>
-      <Button
-      onSubmitCity={props.onSubmitCity}>
-          Get Weather
-      </Button>
+      <CityInput
+        onUpdateCity={props.onUpdateCity}
+        onEnterSubmit={props.onEnterSubmit}
+        city={props.city}/>
     </div>
   )
 }
-
 

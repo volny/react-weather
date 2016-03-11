@@ -2,17 +2,30 @@ import React from 'react'
 import GetCity from '../components/GetCity'
 
 export default React.createClass({
+  getInitialState() {
+    return {
+      city: ''
+    }
+  },
+  handleEnterSubmit(e) {
+    if (e.keyCode == 13 ) {
+      return this.handleSubmitCity(e.target.value);
+    }
+  },
   handleSubmitCity() {
-    console.log('handleSubmitCity');
+    console.log('state.city:', this.state.city)
   },
   handleUpdateCity(e) {
-    console.log('handleUpdateCity');
+    this.setState({
+      city: e.target.value
+    })
   },
   render() {
     return (
       <GetCity
-        onSubmitCity={this.handleSubmitCity}
         onUpdateCity={this.handleUpdateCity}
+        onEnterSubmit={this.handleEnterSubmit}
+        city={this.state.city}
       />
     )
   }
