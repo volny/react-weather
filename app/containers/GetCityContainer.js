@@ -1,5 +1,7 @@
 import React from 'react'
 import GetCity from '../components/GetCity'
+import { currentWeather, forecast } from '../utils/api'
+//var getForecast = require('../utils/api').getForecast
 
 export default React.createClass({
   getInitialState() {
@@ -13,7 +15,10 @@ export default React.createClass({
     }
   },
   handleSubmitCity() {
-    console.log('state.city:', this.state.city)
+    console.log('state.city:', this.state.city);
+    //currentWeather(this.state.city);
+    forecast(this.state.city);
+
   },
   handleUpdateCity(e) {
     this.setState({
