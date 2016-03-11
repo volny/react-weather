@@ -5,7 +5,7 @@ function CityInput (props) {
   return (
     <input
       className='form-control'
-      placeholder='Vienna (press Enter)'
+      placeholder='Vienna'
       type='text'
       onChange={props.onUpdateCity}
       onKeyDown={props.onEnterSubmit}

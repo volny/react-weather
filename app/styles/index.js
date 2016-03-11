@@ -17,5 +17,14 @@ module.exports = {
     fontSize: 45,
     color: '#fff',
     fontWeight: 100
+  },
+  header: {
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'center',
+  //background: 'rgba(252, 90, 44, 0.89)',
+  background: '#eee',
+  color: '#2c3e50',
+  padding: 5
   }
 }
