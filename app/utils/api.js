@@ -44,7 +44,7 @@ function getForecast (city) {
 //          return Math.floor(obj.temp.day - 273.15)
 //        })
 //      )
-      return weatherData.data
+      return weatherData.data.list
   })
 }
 

@@ -11,11 +11,11 @@ export default React.createClass({
   },
   componentDidMount() {
     console.log('props.params', this.props.routeParams)
-    getCurrentWeather(this.props.routeParams.city)
+    getForecast(this.props.routeParams.city)
       .then(function(dataObj) {
-        console.log('currentWeatherData:', dataObj)
+        console.log('data:', dataObj);
         this.setState({
-          currentWeatherData: dataObj,
+          forecastData: dataObj,
           isLoading: false
         })
       }.bind(this))
@@ -23,7 +23,7 @@ export default React.createClass({
   render() {
     return (
       <Forecast
-        currentWeatherData={this.state.currentWeatherData}
+        forecastData={this.state.forecastData}
         isLoading={this.state.isLoading}
         city={this.props.routeParams.city}/>
     )

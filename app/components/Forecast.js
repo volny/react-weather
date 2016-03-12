@@ -7,7 +7,17 @@ export default function Home (props) {
       ? <div>Loading</div>
       : <div>
           <div>
-            Temperature: {props.currentWeatherData.main.temp} in {props.city}
+            <div>Forecast:</div>
+            <div>
+              {
+                props.forecastData.map(function(obj) {
+                  return 'Day: ' + Math.floor(obj.temp.day - 273.15) + ', '
+                })
+              }
+            </div>
+            <div>
+              in {props.city}
+            </div>
           </div>
         </div>
   )
