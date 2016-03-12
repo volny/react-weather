@@ -7,7 +7,7 @@ export default function Home (props) {
       ? <div>Loading</div>
       : <div>
           <div>
-            Temperature: {props.temperature} in {props.city}
+            Temperature: {props.currentWeatherData.main.temp} in {props.city}
           </div>
         </div>
   )
