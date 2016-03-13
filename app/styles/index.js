@@ -18,6 +18,12 @@ module.exports = {
     color: '#fff',
     fontWeight: 100
   },
+  cityHeader: {
+    textAlign: 'center',
+    fontSize: 45,
+    color:'#8c9899',
+    fontWeight: 100
+  },
   header: {
   display: 'flex',
   justifyContent: 'space-between',

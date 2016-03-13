@@ -1,24 +1,26 @@
 import React from 'react'
-//import { homeContainer, subheader } from '../styles'
+import { cityHeader } from '../styles'
+import { convertTemp, getDate } from '../utils/utils'
 
-export default function Home (props) {
+function Day (props) {
+  //return getDate(props.day) + ': ' + convertTemp(props.temp)
+  return <div>{props.weather}</div>
+}
+
+export default function Forecast (props) {
   return (
     props.isLoading === true
       ? <div>Loading</div>
       : <div>
-          <div>
-            <div>Forecast:</div>
+          <h1 style={cityHeader}>{props.city}</h1>
             <div>
               {
+                // forecastData: array of day objects
                 props.forecastData.map(function(obj) {
-                  return 'Day: ' + Math.floor(obj.temp.day - 273.15) + ', '
+                  return <Day key={obj.dt} weather={obj.temp.day}/>
                 })
               }
             </div>
-            <div>
-              in {props.city}
-            </div>
-          </div>
         </div>
   )
 }
