@@ -32,5 +32,35 @@ module.exports = {
   background: '#eee',
   color: '#2c3e50',
   padding: 5
+  },
+  forecastContainer: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    maxWidth: 1200,
+    margin: '50px auto'
+  },
+  dayContainer: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'column',
+    margin: 35
+  },
+  forecastHeader: {
+    fontSize: 65,
+    color: '#333',
+    fontWeight: 100,
+    textAlign: 'center'
+  },
+  forecastSubheader: {
+    fontSize: 30,
+    color: '#333',
+    fontWeight: 100
+  },
+  weatherIcon: {
+    height: 60
   }
 }
