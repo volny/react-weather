@@ -62,5 +62,12 @@ module.exports = {
   },
   weatherIcon: {
     height: 60
+  },
+  detailButton: {
+    color: '#999',
+    background: 'transparent',
+    border: '2px solid',
+    borderColor: '#aaa'
+
   }
 }
