@@ -1,7 +1,6 @@
 import React from 'react'
 import GetCity from '../components/GetCity'
 import { currentWeather, forecast } from '../utils/api'
-//var getForecast = require('../utils/api').getForecast
 
 export default React.createClass({
   contextTypes: {
@@ -14,16 +13,8 @@ export default React.createClass({
   },
   handleEnterSubmit(e) {
     if (e.keyCode == 13 ) {
-      return this.handleSubmitCity(e.target.value);
+      return this.context.router.push('/' + encodeURIComponent(this.state.city))
     }
-  },
-  handleSubmitCity() {
-    console.log('state.city:', this.state.city);
-    //currentWeather(this.state.city);
-    //forecast(this.state.city);
-    //window.location.href = '/#/forecast/' + encodeURIComponent(this.state.city)
-    this.context.router.push('/forecast/' + encodeURIComponent(this.state.city))
-
   },
   handleUpdateCity(e) {
     this.setState({

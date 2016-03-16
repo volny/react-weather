@@ -27,9 +27,6 @@ function getCurrentWeather (city) {
 
   return axios.get(url)
     .then(function (weatherData) {
-//      return (
-//        Math.floor(weatherData.data.main.temp - 273.15)
-//      )
       return weatherData.data
   })
 }
@@ -39,11 +36,6 @@ function getForecast (city) {
 
   return axios.get(url)
     .then(function (weatherData) {
-//      return (
-//        weatherData.data.list.map(function(obj) {
-//          return Math.floor(obj.temp.day - 273.15)
-//        })
-//      )
       return weatherData.data.list
   })
 }

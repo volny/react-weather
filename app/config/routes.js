@@ -11,8 +11,9 @@ module.exports = (
   <Router history={hashHistory}>
     <Route path='/' component={MainContainer}>
       <IndexRoute component={Home}/>
-      <Route path='/forecast/:city' component={ForecastContainer}/>
+      <Route path='/:city' component={ForecastContainer}/>
       <Route path='/detail/:city' component={DetailContainer}/>
+      <Route path='/:city/:timestamp' component={DetailContainer}/>
     </Route>
   </Router>
 )

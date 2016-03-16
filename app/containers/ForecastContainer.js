@@ -4,9 +4,6 @@ import Forecast from '../components/Forecast'
 import { getCurrentWeather, getForecast } from '../utils/api.js'
 
 export default React.createClass({
-  contextTypes: {
-    router: React.PropTypes.object.isRequired
-  },
   getInitialState() {
     return {
       isLoading: true
@@ -23,19 +20,12 @@ export default React.createClass({
         })
       }.bind(this))
   },
-  // we use `.bind` to pass in the API data so we can pass it on to Detail
-  handleClick() {
-    this.context.router.push({
-      pathname: '/detail/' + this.props.routeParams.city,
-    })
-  },
   render() {
     return (
       <Forecast
         forecastData={this.state.forecastData}
         isLoading={this.state.isLoading}
-        city={this.props.routeParams.city}
-        handleClick={this.handleClick}/>
+        city={this.props.routeParams.city}/>
     )
   }
 })
