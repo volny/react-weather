@@ -5,7 +5,7 @@ function CityInput (props) {
   return (
     <input
       className='form-control'
-      placeholder='Vienna'
+      placeholder='City'
       type='text'
       onChange={props.onUpdateCity}
       onKeyDown={props.onEnterSubmit}
@@ -13,7 +13,7 @@ function CityInput (props) {
   )
 }
 
-export default function Home (props) {
+export default function (props) {
   return (
     <div>
       <CityInput
@@ -23,4 +23,3 @@ export default function Home (props) {
     </div>
   )
 }
-

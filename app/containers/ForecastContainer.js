@@ -1,6 +1,5 @@
 import React from 'react'
 import Forecast from '../components/Forecast'
-//import { mainContainer } from '../styles'
 import { getCurrentWeather, getForecast } from '../utils/api.js'
 
 export default React.createClass({
@@ -29,4 +28,3 @@ export default React.createClass({
     )
   }
 })
-

@@ -25,11 +25,7 @@ module.exports = {
     fontWeight: 100
   },
   header: {
-  display: 'flex',
-  justifyContent: 'space-between',
-  alignItems: 'center',
-  //background: 'rgba(252, 90, 44, 0.89)',
-  background: '#eee',
+  background: 'transparent',
   color: '#2c3e50',
   padding: 5
   },
@@ -50,7 +46,7 @@ module.exports = {
     margin: 35
   },
   forecastHeader: {
-    fontSize: 65,
+    fontSize: 60,
     color: '#333',
     fontWeight: 100,
     textAlign: 'center'

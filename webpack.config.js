@@ -16,9 +16,15 @@ module.exports = {
   },
   module: {
     loaders: [
-      {test: /\.js$/, include: __dirname + '/app', loader: 'babel-loader?presets[]=react&presets[]=es2015' },
+      {
+        test: /\.js$/,
+        include: __dirname + '/app',
+        loader: 'babel-loader',
+        query: {
+          presets: ['es2015', 'react']
+        }
+      },
     ]
   },
   plugins: [HtmlWebpackPluginConfig]
 };
-

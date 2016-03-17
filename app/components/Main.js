@@ -2,12 +2,10 @@ import React from 'react'
 import { header } from '../styles'
 import GetCityContainer from '../containers/GetCityContainer'
 
-export default function Home (props) {
+export default function (props) {
   return (
-    <div style={header}>
-      <h1>Main Header</h1>
+    <div className='col-sm-4 col-sm-offset-4' style={header}>
       <GetCityContainer />
     </div>
   )
 }
-

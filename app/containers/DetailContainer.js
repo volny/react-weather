@@ -10,5 +10,3 @@ export default React.createClass({
     )
   }
 })
-
-

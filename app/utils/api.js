@@ -44,4 +44,3 @@ module.exports = {
   getCurrentWeather: getCurrentWeather,
   getForecast: getForecast
 };
-

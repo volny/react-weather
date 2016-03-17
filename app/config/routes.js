@@ -9,12 +9,10 @@ import DetailContainer from '../containers/DetailContainer'
 
 module.exports = (
   <Router history={hashHistory}>
-    <Route path='/' component={MainContainer}>
-      <IndexRoute component={Home}/>
+    <Route path='/' component={Home}/>
+    <Route component={MainContainer}>
       <Route path='/:city' component={ForecastContainer}/>
-      <Route path='/detail/:city' component={DetailContainer}/>
       <Route path='/:city/:timestamp' component={DetailContainer}/>
     </Route>
   </Router>
 )
-

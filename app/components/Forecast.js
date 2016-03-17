@@ -24,7 +24,7 @@ function Day (props) {
   )
 }
 
-export default function Forecast (props) {
+export default function (props) {
   return (
     props.isLoading === true
       ? <div>Loading</div>

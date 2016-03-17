@@ -1,12 +1,10 @@
 import React from 'react'
 import { convertTemp, getDate } from '../utils/utils'
 
-export default function Detail (props) {
+export default function (props) {
   return (
     <div>
       <p>{props.city} on {getDate(props.timestamp)}</p>
     </div>
   )
 }
-
-
