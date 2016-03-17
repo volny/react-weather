@@ -6,7 +6,8 @@ export default React.createClass({
     return (
       <Detail
         city={this.props.routeParams.city}
-        timestamp= {this.props.routeParams.timestamp}/>
+        timestamp={this.props.routeParams.timestamp}
+        APIObj={this.props.location.state.APIObj}/>
     )
   }
 })

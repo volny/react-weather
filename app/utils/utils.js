@@ -23,18 +23,19 @@ var monthsMap = {
   "11":"Dec"
 };
 
-function convertTemp (kelvin) {
+export function convertTemp (kelvin) {
   return Math.floor(kelvin - 273.15)
 }
 
-function getDate (unixTimestmap) {
+export function getDate (unixTimestmap) {
   var date = new Date(unixTimestmap * 1000);
   var day = daysMap[date.getDay()]
   var month = monthsMap[date.getMonth()] + ' ' + date.getDate();
   return day + ', ' + month;
 }
 
-module.exports = {
-  convertTemp: convertTemp,
-  getDate: getDate
+export function capitalizeWords (str) {
+  return str.replace(/\w\S*/g, function(txt) {
+      return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+  });
 }

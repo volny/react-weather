@@ -56,7 +56,7 @@ module.exports = {
     color: '#333',
     fontWeight: 100
   },
-  weatherIcon: {
+  forecastWeatherIcon: {
     height: 60
   },
   detailButton: {
@@ -65,5 +65,8 @@ module.exports = {
     border: '2px solid',
     borderColor: '#aaa'
 
+  },
+  detailWeatherIcon: {
+    height: 120
   }
 }
