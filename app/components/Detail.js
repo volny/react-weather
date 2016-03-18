@@ -13,7 +13,6 @@ export default function ({city, timestamp, APIObj}) {
         <h2 style={forecastSubheader}>Maximum: {convertTemp(APIObj.temp.max)}&#176;</h2>
         <h2 style={forecastSubheader}>Humidity: {APIObj.humidity}&#37;</h2>
       </div>
-
     </div>
   )
 }
