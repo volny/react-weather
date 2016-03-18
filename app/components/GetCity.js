@@ -5,7 +5,7 @@ function CityInput ({onUpdateCity, onEnterSubmit}) {
   return (
     <input
       className='form-control'
-      placeholder='City'
+      placeholder= 'City'
       type='text'
       onChange={onUpdateCity}
       onKeyDown={onEnterSubmit}
@@ -13,7 +13,7 @@ function CityInput ({onUpdateCity, onEnterSubmit}) {
   )
 }
 
-export default function ({onUpdateCity, onEnterSubmit}) {
+export default function ({onUpdateCity, onEnterSubmit, city}) {
   return (
     <div>
       <CityInput

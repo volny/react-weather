@@ -35,7 +35,7 @@ export function getDate (unixTimestmap) {
 }
 
 export function capitalizeWords (str) {
-  return str.replace(/\w\S*/g, function(word) {
-      return word.charAt(0).toUpperCase() + word.substr(1).toLowerCase()
-  })
+  return str.replace(/\w\S*/g, (word) => (
+    word.charAt(0).toUpperCase() + word.substr(1).toLowerCase()
+  ))
 }

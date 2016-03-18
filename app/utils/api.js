@@ -11,7 +11,5 @@ export function getForecast (city) {
   let url = makeURL(city, 'forecast/daily', '&cnt=5')
 
   return axios.get(url)
-    .then(function (weatherData) {
-      return weatherData.data.list
-  })
+  .then((weatherData) => weatherData.data.list)
 }
