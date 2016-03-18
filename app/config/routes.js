@@ -7,7 +7,7 @@ import HomeContainer from '../containers/HomeContainer'
 import ForecastContainer from '../containers/ForecastContainer'
 import DetailContainer from '../containers/DetailContainer'
 
-module.exports = (
+export default (
   <Router history={hashHistory}>
     <Route path='/' component={Home}/>
     <Route component={MainContainer}>

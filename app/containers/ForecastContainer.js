@@ -9,10 +9,9 @@ export default React.createClass({
     }
   },
   componentDidMount() {
-    console.log('props.params', this.props.routeParams)
     getForecast(this.props.routeParams.city)
       .then(function(dataObj) {
-        console.log('data:', dataObj);
+        console.log(this.props.routeParams.city + ': ', dataObj)
         this.setState({
           forecastData: dataObj,
           isLoading: false

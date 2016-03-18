@@ -1,25 +1,24 @@
 import React from 'react'
 import { homeContainer, subheader } from '../styles'
 
-function CityInput (props) {
+function CityInput ({onUpdateCity, onEnterSubmit}) {
   return (
     <input
       className='form-control'
       placeholder='City'
       type='text'
-      onChange={props.onUpdateCity}
-      onKeyDown={props.onEnterSubmit}
+      onChange={onUpdateCity}
+      onKeyDown={onEnterSubmit}
       />
   )
 }
 
-export default function (props) {
+export default function ({onUpdateCity, onEnterSubmit}) {
   return (
     <div>
       <CityInput
-        onUpdateCity={props.onUpdateCity}
-        onEnterSubmit={props.onEnterSubmit}
-        city={props.city}/>
+        onUpdateCity={onUpdateCity}
+        onEnterSubmit={onEnterSubmit}/>
     </div>
   )
 }

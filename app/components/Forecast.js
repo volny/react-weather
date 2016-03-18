@@ -3,15 +3,15 @@ import { forecastContainer, dayContainer, forecastHeader, forecastSubheader, for
 import { convertTemp, getDate } from '../utils/utils'
 import { Link } from 'react-router'
 
-function Day (props) {
+function Day ({APIObj, city, timestamp}) {
   return (
     <div style={dayContainer}>
-      <h2 style={forecastSubheader}>{getDate(props.APIObj.dt)}</h2>
-      <img src={'./app/images/weather-icons/' + props.APIObj.weather[0].icon + '.svg'} alt="Icon" style={forecastWeatherIcon}/>
-      <h2 style={forecastSubheader}>{convertTemp(props.APIObj.temp.day)}&#176;</h2>
+      <h2 style={forecastSubheader}>{getDate(APIObj.dt)}</h2>
+      <img src={'./app/images/weather-icons/' + APIObj.weather[0].icon + '.svg'} alt="Icon" style={forecastWeatherIcon}/>
+      <h2 style={forecastSubheader}>{convertTemp(APIObj.temp.day)}&#176;</h2>
       <Link to={{
-        pathname: encodeURIComponent(props.city) + '/' + encodeURIComponent(props.timestamp),
-        state: { APIObj: props.APIObj } }}>
+        pathname: encodeURIComponent(city) + '/' + encodeURIComponent(timestamp),
+        state: { APIObj: APIObj } }}>
           <button
             type='button'
             className='btn btn-lg'
@@ -23,20 +23,20 @@ function Day (props) {
   )
 }
 
-export default function (props) {
+export default function ({isLoading, city, forecastData}) {
   return (
-    props.isLoading === true
+    isLoading === true
       ? <div>Loading</div>
       : <div>
-          <h1 style={forecastHeader}>{props.city}</h1>
+          <h1 style={forecastHeader}>{city}</h1>
             <div style={forecastContainer}>
               {
-                props.forecastData.map(function(obj) {
+                forecastData.map(function(obj) {
                   return (
                     <Day
                       key={obj.dt}
                       APIObj={obj}
-                      city={props.city}
+                      city={city}
                       timestamp={obj.dt}/>
                   )
                 })
