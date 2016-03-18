@@ -8,15 +8,17 @@ export default React.createClass({
       isLoading: true
     }
   },
-  componentDidMount() {
-    getForecast(this.props.routeParams.city)
-      .then((dataObj) => {
-        console.log(this.props.routeParams.city + ': ', dataObj)
-        this.setState({
-          forecastData: dataObj,
-          isLoading: false
-        })
+  async componentDidMount() {
+    try {
+      const forecastData = await getForecast(this.props.routeParams.city)
+      console.log(this.props.routeParams.city + ': ', forecastData)
+      this.setState({
+        forecastData,
+        isLoading: false
       })
+    } catch (err) {
+      console.warn('Error in ForecastContainer', err)
+    }
   },
   render() {
     return (
