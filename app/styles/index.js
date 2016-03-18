@@ -1,8 +1,3 @@
-export const mainContainer = {
-  width: '100%',
-  height: '92%'
-}
-
 export const homeContainer = {
   backgroundSize: 'cover',
   backgroundImage: "url('app/images/pattern.svg')",
