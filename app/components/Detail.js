@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 import { convertTemp, getDate, capitalizeWords } from '../utils/utils'
 import { cityHeader, dayContainer, detailWeatherIcon, forecastSubheader } from '../styles'
 
-export default function ({city, timestamp, APIObj}) {
+export default function Detail ({city, timestamp, APIObj}) {
   return (
     <div>
       <h1 style={cityHeader}>{city} on {getDate(timestamp)}</h1>
@@ -15,4 +15,10 @@ export default function ({city, timestamp, APIObj}) {
       </div>
     </div>
   )
+}
+
+Detail.propTypes = {
+  city: PropTypes.string.isRequired,
+  timestamp: PropTypes.string.isRequired,
+  APIObj: PropTypes.object.isRequired
 }

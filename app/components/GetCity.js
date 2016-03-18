@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 import { homeContainer, subheader } from '../styles'
 
 function CityInput ({onUpdateCity, onEnterSubmit}) {
@@ -13,7 +13,7 @@ function CityInput ({onUpdateCity, onEnterSubmit}) {
   )
 }
 
-export default function ({onUpdateCity, onEnterSubmit, city}) {
+export default function GetCity ({onUpdateCity, onEnterSubmit}) {
   return (
     <div>
       <CityInput
@@ -21,4 +21,9 @@ export default function ({onUpdateCity, onEnterSubmit, city}) {
         onEnterSubmit={onEnterSubmit}/>
     </div>
   )
+}
+
+GetCity.propTypes = {
+  onUpdateCity: PropTypes.func.isRequired,
+  onEnterSubmit: PropTypes.func.isRequired
 }

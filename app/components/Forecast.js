@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 import { forecastContainer, dayContainer, forecastHeader, forecastSubheader, forecastWeatherIcon, detailButton } from '../styles'
 import { convertTemp, getDate } from '../utils/utils'
 import { Link } from 'react-router'
@@ -23,7 +23,7 @@ function Day ({APIObj, city, timestamp}) {
   )
 }
 
-export default function ({isLoading, city, forecastData}) {
+export default function Forecast ({isLoading, city, forecastData}) {
   return (
     isLoading === true
       ? <div>Loading</div>
@@ -44,4 +44,10 @@ export default function ({isLoading, city, forecastData}) {
             </div>
         </div>
   )
+}
+
+Forecast.propTypes = {
+  isLoading: PropTypes.bool.isRequired,
+  city: PropTypes.string.isRequired,
+  forecastData: PropTypes.array.isRequired
 }
