@@ -1,10 +1,11 @@
 import React from 'react'
-import { header } from '../styles'
+
+import '../styles/main.css'
 import GetCityContainer from '../containers/GetCityContainer'
 
 export default function ({children}) {
   return (
-    <div className='col-sm-4 col-sm-offset-4' style={header}>
+    <div className='mainNavbar'>
       <GetCityContainer />
       { children }
     </div>

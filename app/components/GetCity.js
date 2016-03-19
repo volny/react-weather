@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react'
-import { homeContainer, subheader } from '../styles'
 
 function CityInput ({onUpdateCity, onEnterSubmit}) {
   return (

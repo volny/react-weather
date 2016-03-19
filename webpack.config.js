@@ -25,6 +25,17 @@ module.exports = {
           presets: ['es2015', 'react', 'stage-0']
         }
       },
+      {
+        test: /\.css$/,
+        include: __dirname + '/app',
+        loader: 'style-loader!css-loader'
+      },
+      {
+        test: /\.svg/,
+        include: __dirname + '/app',
+        loader: "file-loader"
+      }
+
     ]
   },
   plugins: [HtmlWebpackPluginConfig]

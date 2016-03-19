@@ -1,18 +1,20 @@
 import React, { PropTypes } from 'react'
+
+import '../styles/main.css'
 import { convertTemp, getDate, capitalizeWords } from '../utils/utils'
-import { cityHeader, dayContainer, detailWeatherIcon, forecastSubheader } from '../styles'
 
 export default function Detail ({city, timestamp, APIObj}) {
   return (
-    <div>
-      <h1 style={cityHeader}>{city} on {getDate(timestamp)}</h1>
-      <div style={dayContainer}>
-        <img src={'./app/images/weather-icons/' + APIObj.weather[0].icon + '.svg'} alt="Icon" style={detailWeatherIcon}/>
-        <h2 style={forecastSubheader}>{capitalizeWords(APIObj.weather[0].description)}</h2>
-        <h2 style={forecastSubheader}>Minimum: {convertTemp(APIObj.temp.min)}&#176;</h2>
-        <h2 style={forecastSubheader}>Maximum: {convertTemp(APIObj.temp.max)}&#176;</h2>
-        <h2 style={forecastSubheader}>Humidity: {APIObj.humidity}&#37;</h2>
-      </div>
+    <div className='detailContainer text-center'>
+      <h1 className='detailHeader'>{capitalizeWords(city)} on {getDate(timestamp)}</h1>
+      <img
+        src={'./app/images/weather-icons/' + APIObj.weather[0].icon + '.svg'}
+        alt="Icon"
+        className='detailIcon'/>
+      <p className='forecastDetailText'>{capitalizeWords(APIObj.weather[0].description)}</p>
+      <p className='forecastDetailText'>Minimum: {convertTemp(APIObj.temp.min)}&#176;</p>
+      <p className='forecastDetailText'>Maximum: {convertTemp(APIObj.temp.max)}&#176;</p>
+      <p className='forecastDetailText'>Humidity: {APIObj.humidity}&#37;</p>
     </div>
   )
 }

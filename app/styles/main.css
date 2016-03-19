@@ -1,0 +1,59 @@
+.homeContainer {
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.homeHeader {
+  font-size: 45px;
+  color: #fff;
+  font-weight: 100;
+}
+
+.mainNavbar {
+  background: transparent;
+  padding-top: 20px;
+}
+
+.detailHeader {
+  text-align: center;
+  font-size: 45px;
+  color: #8c9899;
+  font-weight: 100;
+}
+
+.forecastHeader {
+  padding: 10px 0;
+  font-size: 60px;
+  color: #333;
+  font-weight: 100;
+}
+
+.forecastDetailText {
+  font-size: 30px;
+  color: #333;
+  font-weight: 100;
+}
+
+.forecastIcon {
+  height: 60px;
+}
+
+.forecastButton {
+  color: #999;
+  background: transparent;
+  border: 2px solid;
+  border-color: #aaa;
+}
+
+/* TODO */
+.detailContainer {
+}
+
+.detailIcon {
+  height: 120px;
+}

@@ -1,11 +1,14 @@
 import React from 'react'
-import { homeContainer, subheader } from '../styles'
+
+import { pattern } from '../styles'
+import '../styles/main.css'
+
 import GetCityContainer from '../containers/GetCityContainer'
 
 export default function () {
   return (
-    <div style={homeContainer}>
-      <h2 style={subheader}>Select a city</h2>
+    <div className='homeContainer' style={pattern}>
+      <h2 className='homeHeader'>Select a city</h2>
       <GetCityContainer />
     </div>
   )
