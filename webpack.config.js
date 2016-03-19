@@ -32,7 +32,7 @@ module.exports = {
       },
       {
         test: /\.svg/,
-        include: __dirname + '/app',
+        include: __dirname + '/app/images',
         loader: "file-loader"
       }
 

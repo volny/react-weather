@@ -9,6 +9,7 @@ import { convertTemp, getDate } from '../utils/utils'
 // TODO idea: separate bootstrap classnames out into styles.js to have all layout in one place
 // possibly have `layout.js` and `styling.css` for separation
 function Day ({APIObj, city, timestamp}) {
+  const iconURL = require('../images/weather-icons/' + APIObj.weather[0].icon + '.svg')
   return (
     <div className='row'>
       <div className='col-xs-4 text-center'>
@@ -16,7 +17,7 @@ function Day ({APIObj, city, timestamp}) {
       </div>
       <div className='col-xs-2 text-center'>
         <img
-          src={'./app/images/weather-icons/' + APIObj.weather[0].icon + '.svg'}
+          src={iconURL}
           alt="Icon"
           className='forecastIcon'/>
       </div>
