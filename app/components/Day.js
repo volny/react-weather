@@ -7,7 +7,7 @@ import { convertTemp, getDate } from '../utils/utils'
 export default function Day ({APIObj, city, timestamp}) {
   const iconURL = require('../images/weather-icons/' + APIObj.weather[0].icon + '.svg')
   return (
-    <div className='row'>
+    <div className='dayContainer row'>
       <div className='col-xs-4 text-center'>
         <span className='forecastDetailText'>{getDate(APIObj.dt)}</span>
       </div>

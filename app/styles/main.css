@@ -23,18 +23,17 @@
 
 .nav {
   background: transparent;
-  padding-top: 20px;
+  padding-top: 35px;
 }
 
-.detailHeader {
-  text-align: center;
-  font-size: 45px;
-  color: #8c9899;
-  font-weight: 100;
+.forecastDetailHeaderContainer {
+  margin: 40px 0 60px;
+  opacity: 0.6;
+  background-color: white;
 }
 
-.forecastHeader {
-  padding: 10px 0;
+.forecastDetailHeader {
+  margin: 0;
   font-size: 60px;
   color: #333;
   font-weight: 100;
@@ -57,10 +56,22 @@
   border-color: #aaa;
 }
 
-/* TODO */
-.detailContainer {
+.dayContainer {
+  opacity: 0.6;
+  background-color: white;
+  margin: 20px 0;
+  padding: 15px 0;
+  border-radius: 5px;
 }
 
+.dayDetailContainer {
+  margin: 0 auto;
+  display: inline-block;
+  opacity: 0.6;
+  background-color: white;
+  padding: 45px;
+  border-radius: 5px;
+}
 .detailIcon {
   height: 120px;
 }
