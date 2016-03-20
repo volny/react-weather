@@ -4,7 +4,7 @@ import { Link } from 'react-router'
 import '../styles/main.css'
 import { convertTemp, getDate } from '../utils/utils'
 
-export default function Day ({APIObj, city, timestamp}) {
+export default function DayRow ({APIObj, city, timestamp}) {
   const iconURL = require('../images/weather-icons/' + APIObj.weather[0].icon + '.svg')
   return (
     <div className='dayContainer row'>
