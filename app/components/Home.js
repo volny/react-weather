@@ -1,4 +1,5 @@
 import React from 'react'
+import FontAwesome from 'react-fontawesome'
 
 import '../styles/main.css'
 import InputContainer from '../containers/InputContainer'
@@ -16,9 +17,15 @@ export default function () {
         </div>
       </div>
       <div className='homeCreditsContainer'>
-        <span>GH </span>
-        <span>TW </span>
-        <span>LK</span>
+        <a href="https://github.com/volny">
+          <FontAwesome name='github' size='2x' className='homeCreditsIcon'/>
+        </a>
+        <a href="https://twitter.com/volnyio">
+          <FontAwesome name='twitter' size='2x' className='homeCreditsIcon'/>
+        </a>
+        <a href="https://www.linkedin.com/in/felixvolny">
+          <FontAwesome name='linkedin' size='2x' className='homeCreditsIcon'/>
+        </a>
       </div>
     </div>
   )

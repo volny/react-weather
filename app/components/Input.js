@@ -1,10 +1,12 @@
 import React, { PropTypes } from 'react'
+import FontAwesome from 'react-fontawesome'
 
 import '../styles/main.css'
 
 export default function Input ({onUpdateCity, onEnterSubmit}) {
   return (
-    <div>
+    <div className='inputContainer'>
+      <FontAwesome name='search' className='inputSearchIcon'/>
       <input
         className='form-control inputField'
         placeholder= 'City'

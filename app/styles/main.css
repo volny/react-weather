@@ -53,8 +53,17 @@
   background-color: white;
   border-radius: 5px;
   position: absolute;
-  bottom: 15px;
-  right: 25px;
+  bottom: 30px;
+  right: 40px;
+}
+
+.homeCreditsIcon {
+  color: #777;
+  padding: 2px 5px;
+}
+
+.homeCreditsIcon:hover {
+  color: #444;
 }
 
 .nav {
@@ -62,9 +71,23 @@
   padding-top: 35px;
 }
 
+.inputContainer {
+  position: relative;
+}
+
 .inputField {
+  text-indent: 20px;
   color: #777;
   border-color: #777;
+  font-size: 18px;
+}
+
+.inputSearchIcon {
+  color: #777;
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  font-size: 18px;
 }
 
 .inputField:focus {
