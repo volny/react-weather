@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
-import GetCity from '../components/GetCity'
-import { currentWeather, forecast } from '../utils/api'
+import Input from '../components/Input'
 
-export default class GetCityContainer extends Component {
+export default class InputContainer extends Component {
   constructor() {
     super()
     this.state =  {
@@ -21,15 +20,13 @@ export default class GetCityContainer extends Component {
   }
   render() {
     return (
-      <GetCity
+      <Input
         onUpdateCity={(e) => this.handleUpdateCity(e)}
-        onEnterSubmit={(e) => this.handleEnterSubmit(e)}
-        city={this.state.city}
-      />
+        onEnterSubmit={(e) => this.handleEnterSubmit(e)}/>
     )
   }
 }
 
-GetCityContainer.contextTypes = {
+InputContainer.contextTypes = {
   router: React.PropTypes.object.isRequired
 }

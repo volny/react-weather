@@ -5,7 +5,7 @@ import '../styles/main.css'
 
 export default function ({children}) {
   return (
-    <div className='main' style={pattern}>
+    <div className='main'>
       {children}
     </div>
   )

@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react'
 
-export default function GetCity ({onUpdateCity, onEnterSubmit}) {
+export default function Input ({onUpdateCity, onEnterSubmit}) {
   return (
     <div>
       <input
@@ -11,4 +11,9 @@ export default function GetCity ({onUpdateCity, onEnterSubmit}) {
         onKeyDown={onEnterSubmit}/>
     </div>
   )
+}
+
+Input.propTypes = {
+  onUpdateCity: PropTypes.func.isRequired,
+  onEnterSubmit: PropTypes.func.isRequired
 }
